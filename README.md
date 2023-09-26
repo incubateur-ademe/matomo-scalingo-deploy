@@ -10,7 +10,7 @@ It was inspired by the PaaS buildpack [1024 pix matomo-buildpack](https://github
 
 ## Usage 
 
-### Installation
+### Installation 
 
 As a pre-requesites, you must be connected to a valid (with a valid payment method) Scalingo account.
 
