@@ -14,17 +14,13 @@ It was inspired by the PaaS buildpack [1024 pix matomo-buildpack](https://github
 
 As a pre-requesites, you must be connected to a valid (with a valid payment method) Scalingo account.
 
-[![Deploy to Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy?source=https://github.com/incubateur-ademe/matomo-scalingo-deploy)
-
-Then follow the steps below:
-
-1. Fork this repository
-2. From the GitHub interface of your fork, edit the `README.md` file and change the "Deploy to Scalingo" href link to your repository's one
-3. Save, commit and push your change
-4. Click on the "one-click deployment" button above ; you will be redirected to the Scalingo new application interface
-5. Fill-up the form about the Matomo application environment variables and follow the instructions
-
-![Scalingo new Matomo app form](assets/scalingo_new_matomo_app_form.png)
+1. Create a Scalingo app with 2 containers : 1 web (1:M) and 1 cron (0:M) ;
+2. Add all the required environment variables ;
+3. Deploy this repository to your newly created app with : `scalingo deploy --app matomo-incubateur-ademe https://github.com/incubateur-ademe/matomo-scalingo-deploy/archive/refs/heads/master.tar.gz test`
+4. Connect to your app via the [Scalingo CLI](https://doc.scalingo.com/platform/cli/start) using the following command : `scalingo --app matomo-incubateur-ademe run bash`
+5. Launch the initialization script : `./bin/first-init-deploy.sh`
+6. Fetch your purchased plugins : `./bin/fetch-purchased-plugins.sh`
+7. Manually redeploy the app.
 
 ### Configuration
 
