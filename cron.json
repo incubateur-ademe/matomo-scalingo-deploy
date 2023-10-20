@@ -1,0 +1,7 @@
+{
+  "jobs": [
+    {
+      "command": "0/60 * * * * ./bin/auto-archiving-reports.sh"
+    }
+  ]
+}
